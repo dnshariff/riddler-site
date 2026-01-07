@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Riddle</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    body {
+      background-image: url("backgroundTwo.jpg"); /* <-- YOUR IMAGE */
+      background-repeat: repeat;               /* pattern fills screen */
+      background-size: cover;                  /* remove if you want tiling */
+      background-position: center;
+      background-color: #4a7c2b;               /* fallback green */
+      position: relative;
+    }
+
+    /* Center card */
+    .card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 30px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 12px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    button {
+      background: black;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: white;
+      color: black;
+    }
+
+    .answer {
+      margin-top: 15px;
+      display: none;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2 id="riddle"></h2>
+    <button onclick="showAnswer()">Show Answer</button>
+    <div class="answer" id="answer"></div>
+  </div>
+
+  <script>
+    const riddles = [
+      { q: "What has keys but can’t open locks?", a: "A piano." },
+      { q: "I speak without a mouth and hear without ears. What am I?", a: "An echo." },
+      { q: "The more you take, the more you leave behind. What are they?", a: "Footsteps." },
+      { q: "What comes once in a minute, twice in a moment, but never in a thousand years?", a: "The letter 'M'." }
+    ];
+
+    // Pick random riddle
+    const chosen = riddles[Math.floor(Math.random() * riddles.length)];
+    document.getElementById("riddle").textContent = chosen.q;
+    document.getElementById("answer").textContent = chosen.a;
+
+    function showAnswer() {
+      document.getElementById("answer").style.display = "block";
+    }
+
+  </script>
+
+</body>
+</html>
