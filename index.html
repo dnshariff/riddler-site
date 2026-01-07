@@ -14,15 +14,14 @@
     }
 
     body {
-      background-image: url("backgroundTwo.jpg"); /* <-- YOUR IMAGE */
-      background-repeat: repeat;               /* pattern fills screen */
-      background-size: cover;                  /* remove if you want tiling */
+      background-image: url("backgroundTwo.jpg");
+      background-repeat: repeat;
+      background-size: cover;
       background-position: center;
-      background-color: #4a7c2b;               /* fallback green */
+      background-color: #4a7c2b;
       position: relative;
     }
 
-    /* Center card */
     .card {
       position: absolute;
       top: 50%;
@@ -73,10 +72,55 @@
       { q: "What has keys but can’t open locks?", a: "A piano." },
       { q: "I speak without a mouth and hear without ears. What am I?", a: "An echo." },
       { q: "The more you take, the more you leave behind. What are they?", a: "Footsteps." },
-      { q: "What comes once in a minute, twice in a moment, but never in a thousand years?", a: "The letter 'M'." }
+      { q: "What comes once in a minute, twice in a moment, but never in a thousand years?", a: "The letter 'M'." },
+      { q: "I’m tall when I’m young and short when I’m old. What am I?", a: "A candle." },
+      { q: "What has a heart that doesn’t beat?", a: "An artichoke." },
+      { q: "What can travel around the world while staying in a corner?", a: "A stamp." },
+      { q: "What has hands but cannot clap?", a: "A clock." },
+      { q: "What has a head, a tail, but no body?", a: "A coin." },
+      { q: "I have cities but no houses, forests but no trees, and rivers but no water. What am I?", a: "A map." },
+      { q: "What begins with T, ends with T, and has T in it?", a: "A teapot." },
+      { q: "What can you break, even if you never pick it up or touch it?", a: "A promise." },
+      { q: "What goes up but never comes down?", a: "Your age." },
+      { q: "What has one eye but can’t see?", a: "A needle." },
+      { q: "What can fill a room but takes up no space?", a: "Light." },
+      { q: "What has an endless supply of letters but starts empty?", a: "A mailbox." },
+      { q: "What is so fragile that saying its name breaks it?", a: "Silence." },
+      { q: "I’m not alive, but I grow; I don’t have lungs, but I need air; I don’t have a mouth, but water kills me. What am I?", a: "Fire." },
+      { q: "The more you take away from me, the bigger I get. What am I?", a: "A hole." },
+      { q: "What has many teeth but cannot bite?", a: "A comb." },
+      { q: "What is full of holes but still holds water?", a: "A sponge." },
+      { q: "What has a neck but no head?", a: "A bottle." },
+      { q: "What has words but never speaks?", a: "A book." },
+      { q: "What comes down but never goes up?", a: "Rain." },
+      { q: "What is always in front of you but can’t be seen?", a: "The future." },
+      { q: "I’m found in socks, scarves and mittens; and often in the paws of playful kittens. What am I?", a: "Yarn." },
+      { q: "I’m light as a feather, yet the strongest man can’t hold me for much more than a minute. What am I?", a: "Breath." },
+      { q: "The more of me you take, the more you leave behind. What am I?", a: "Footsteps." },
+      { q: "I have branches, but no fruit, trunk or leaves. What am I?", a: "A bank." },
+      { q: "What can you catch but not throw?", a: "A cold." },
+      { q: "I am always hungry and must always be fed, but if you give me water I die. What am I?", a: "Fire." },
+      { q: "I have a tail and a head, but no body. What am I?", a: "A coin." },
+      { q: "I fly without wings, I cry without eyes. Wherever I go, darkness flies. What am I?", a: "Clouds." },
+      { q: "I shave every day, but my beard stays the same. What am I?", a: "A barber." },
+      { q: "What begins with an E, ends with an E, but only contains one letter?", a: "An envelope." },
+      { q: "What can run but never walks, has a mouth but never talks, has a bed but never sleeps?", a: "A river." },
+      { q: "The more you take out of me, the bigger I get. What am I?", a: "A hole." },
+      { q: "I go in hard, come out soft, and am never the same. What am I?", a: "Chewing gum." },
+      { q: "What has four wheels and flies?", a: "A garbage truck." },
+      { q: "What has an eye but cannot see?", a: "A needle." },
+      { q: "What has a ring but no finger?", a: "A telephone." },
+      { q: "What can be cracked, made, told, and played?", a: "A joke." },
+      { q: "What has a bottom at the top?", a: "A leg." },
+      { q: "What comes once in a year, twice in a week, and never in a day?", a: "The letter 'E'." },
+      { q: "What kind of room has no doors or windows?", a: "A mushroom." },
+      { q: "I have keys that open no locks. I have space but no room. You can enter, but can’t go outside. What am I?", a: "A keyboard." },
+      { q: "What has a thumb and four fingers but is not alive?", a: "A glove." },
+      { q: "I am always in water but never get wet. What am I?", a: "A reflection." },
+      { q: "What can you keep after giving it to someone?", a: "Your word." },
+      { q: "I’m always coming, but never arrive. What am I?", a: "Tomorrow." }
     ];
 
-    // Pick random riddle
     const chosen = riddles[Math.floor(Math.random() * riddles.length)];
     document.getElementById("riddle").textContent = chosen.q;
     document.getElementById("answer").textContent = chosen.a;
@@ -84,7 +128,6 @@
     function showAnswer() {
       document.getElementById("answer").style.display = "block";
     }
-
   </script>
 
 </body>
